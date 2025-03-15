@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    // not fully completed
     cout << "Think of an number <1-100>\n";
 
     int beg = 1, end = 100, number = 0;
