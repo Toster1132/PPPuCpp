@@ -3,15 +3,19 @@
 using namespace std;
 
 bool isPrime(int);
-void primeIn(vector<int> &);
+void primeIn(vector<int> &,int);
 void primeOut(const vector<int>);
 
 int main()
 {
+    //
+    // Modified Ex11
+    //
     vector<int> nums;
-    cout << "All prime numbers between 1 and 100: \n";
-
-    primeIn(nums);
+    cout << "Outputting prime numbers beetween 1 and your input: \n";
+    int userInput = 0;
+    cin >> userInput;
+    primeIn(nums,userInput);
     primeOut(nums);
     return 0;
 }
@@ -30,9 +34,9 @@ bool isPrime(int p)
     }
     return true;
 }
-void primeIn(vector<int> &primes)
+void primeIn(vector<int> &primes,int max)
 {
-    for (int i = 2; i <= 100; i++)
+    for (int i = 2; i <= max; i++)
     {
         if (isPrime(i) == true)
         {
