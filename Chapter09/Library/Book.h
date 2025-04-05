@@ -5,12 +5,22 @@ class Book
 {
 public:
     void setIsbn();
+    string getIsbn() const;
+
     void setTitle();
+    string getTitle() const;
+
     void setAuthor();
+    string getAuthor() const;
+
     void setCpD();
-    void getCheck();
+    string getCpD() const;
+
+    void setCheck();
+    bool getCheck() const;
+
     void setGenre();
-    string getGenre()const;
+    string getGenre() const;
 
     friend ostream &operator<<(ostream &os, const Book &d);
     friend bool operator==(const Book &, const Book &);
@@ -28,7 +38,6 @@ private:
         Children
     };
     Genre g;
-    bool checkingBook(const char &);
     struct data
     {
         string isbn;

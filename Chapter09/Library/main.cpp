@@ -1,25 +1,23 @@
-#include "Book.h"
-#include "Patron.h"
+#include "Library.h"
+
 int main()
 {
     try
     {
-        Book book0;
-        Book book1;
-
-        if (book0 == book1)
-        {
-            cout << "ISBN numbers are the same, bad as I assume\n";
-        }
-        else if (book0 != book1)
-        {
-            cout << "ISBN numbers are NOT the same, great\n";
-        }
-
-        cout << book0 << '\n';
-        cout << book1 << '\n';
-
-        Patron p;
+        // Patron p;
+        // if (book0 == book1)
+        // {
+        //     cout << "ISBN numbers are the same, bad as I assume\n";
+        // }
+        // else if (book0 != book1)
+        // {
+        //     cout << "ISBN numbers are NOT the same, great\n";
+        // }
+        // cout << book0 << '\n';
+        // cout << book1 << '\n';
+        Book books;
+        Patron patr;
+        Library lib;
     }
     catch (const runtime_error &e)
     {

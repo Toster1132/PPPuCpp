@@ -1,15 +1,15 @@
 #include <iostream>
-#include <string>
 using namespace std;
+
 class Patron
 {
 public:
     void setFee();      // set
-    void getFee();    // use isFee() then print
+    double getFee();    // use isFee() then return
     void setUsername(); // set
-    void getUsername();
+    string getUsername();
     void setLibCardNum(); // set
-    void getLibCardNum();
+    int getLibCardNum();
     Patron();
 
 private:

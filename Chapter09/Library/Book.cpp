@@ -1,31 +1,26 @@
 #include "Book.h"
 //
-//
-//  This class is a big mess and will rewrite it
-//
-//
-ostream &operator<<(ostream &os, const Book &B)
-{
-    os << " | ISBN number: " << B.d.isbn << " | Book Title: " << B.d.title << " | Book author: " << B.d.author << " | Copyright date: " << B.d.copyrightDate << " | Is checked?: " << B.d.check << " | Genre: " << B.getGenre();
-    return os;
-}
-bool operator==(const Book &b1, const Book &b2)
-{
-    return b2.d.isbn == b1.d.isbn;
-}
-bool operator!=(const Book &b1, const Book &b2)
-{
-    return b2.d.isbn != b1.d.isbn;
-}
+// ostream &operator<<(ostream &os, const Book &B)
+// {
+//     os << " | ISBN number: " << B.d.isbn << " | Book Title: " << B.d.title << " | Book author: " << B.d.author << " | Copyright date: " << B.d.copyrightDate << " | Is checked?: " << B.d.check << " | Genre: " << B.getGenre();
+//     return os;
+// }
+// bool operator==(const Book &b1, const Book &b2)
+// {
+//     return b2.d.isbn == b1.d.isbn;
+// }
+// bool operator!=(const Book &b1, const Book &b2)
+// {
+//     return b2.d.isbn != b1.d.isbn;
+// }
 
 Book::Book()
 {
-    setGenre();
     setIsbn();
     setTitle();
     setAuthor();
     setCpD();
-    getCheck();
+    setCheck();
 }
 string Book::getGenre() const
 {
@@ -53,22 +48,14 @@ void Book::setGenre()
     cin >> gInput;
     g = static_cast<Genre>(gInput);
 }
-void Book::getCheck()
+void Book::setCheck()
 {
     cout << "Do you want to check the book? enter 'y' or 'n'\n";
     cin >> d.check;
-    if (checkingBook(d.check))
-    {
-        cout << "checked.\n";
-    }
-    else
-    {
-        cout << "UNchecked.\n";
-    }
 }
-bool Book::checkingBook(const char &input)
+bool Book::getCheck() const
 {
-    switch (input)
+    switch (d.check)
     {
     case 'y':
         return true;
@@ -94,11 +81,19 @@ void Book::setIsbn()
 
     cout << "valid!\n";
 }
+string Book::getIsbn() const
+{
+    return d.isbn;
+}
 void Book::setTitle()
 {
     cout << "Enter book title: \n";
     cin.ignore();
     getline(cin, d.title);
+}
+string Book::getTitle() const
+{
+    return d.title;
 }
 void Book::setAuthor()
 {
@@ -106,9 +101,17 @@ void Book::setAuthor()
     cin.ignore();
     getline(cin, d.author);
 }
+string Book::getAuthor() const
+{
+    return d.author;
+}
 void Book::setCpD()
 {
     cout << "enter copyright date: \n";
     cin.ignore();
     getline(cin, d.copyrightDate);
+}
+string Book::getCpD() const
+{
+    return d.copyrightDate;
 }
