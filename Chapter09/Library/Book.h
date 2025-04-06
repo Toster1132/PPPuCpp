@@ -26,8 +26,6 @@ public:
     friend bool operator==(const Book &, const Book &);
     friend bool operator!=(const Book &, const Book &);
 
-    Book();
-
 private:
     enum class Genre
     {

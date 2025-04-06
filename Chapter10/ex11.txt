@@ -1,0 +1,9 @@
+bober kur: 12
+" 122 ;"
+asas 12; a;
+cytrynaaaa 2 3
+3
+beaver 0 ;
+12;
+giraffee ; 22
+"12 <- this is not separated by whitespace so it wont be used

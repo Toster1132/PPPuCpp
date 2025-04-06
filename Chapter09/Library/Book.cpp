@@ -14,14 +14,6 @@
 //     return b2.d.isbn != b1.d.isbn;
 // }
 
-Book::Book()
-{
-    setIsbn();
-    setTitle();
-    setAuthor();
-    setCpD();
-    setCheck();
-}
 string Book::getGenre() const
 {
     switch (static_cast<int>(g))

@@ -1,10 +1,4 @@
 #include "Patron.h"
-Patron::Patron()
-{
-    setFee();
-    setUsername();
-    setLibCardNum();
-}
 bool Patron::isFee() // check if there is fee
 {
     if (libFee > 0)

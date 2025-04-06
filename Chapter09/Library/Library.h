@@ -8,18 +8,7 @@ using namespace std;
 class Library
 {
 public:
-    Library();
-    void addBooks();
-    void addPatrons();
     void checkOutBooks();
-    void libConstructor();
 private:
-    struct Transaction
-    {
-        Book book;
-        Patron patron;
-        // Date
-    };
-    Transaction trans;
-    vector<Transaction> v;
+
 };

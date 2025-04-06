@@ -10,7 +10,6 @@ public:
     string getUsername();
     void setLibCardNum(); // set
     int getLibCardNum();
-    Patron();
 
 private:
     bool isFee();       // fee is greater than 0 return yes
