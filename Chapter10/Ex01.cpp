@@ -33,8 +33,9 @@ int main()
 }
 void File::enterFromFile()
 {
-    // from this ONE file
-    ifstream ist{"file.txt"};
+    string name;
+    cin >> name;
+    ifstream ist{name};
     if (!ist)
         throw runtime_error("Cant open file");
     int x = 0;

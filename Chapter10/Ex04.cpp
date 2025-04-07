@@ -40,7 +40,9 @@ cTemps::cTemps()
 }
 void cTemps::readTemps()
 {
-    ifstream ist("temp_fc.txt");
+    string name;
+    cin >> name;
+    ifstream ist(name);
     if(!ist) throw runtime_error("File couldnt be accessed");
     int x = 0;
     double y = 0;

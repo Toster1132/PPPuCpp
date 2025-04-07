@@ -9,8 +9,10 @@ int main()
 {
     try
     {
-        string fileName = "file.txt";
-        string fileName2 = "file2.txt";
+        string fileName;
+        string fileName2;
+        cin >> fileName;
+        cin >> fileName2;
 
         ifstream ist{fileName};
         if (!ist)

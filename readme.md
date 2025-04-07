@@ -3,4 +3,4 @@ I do not use his ```"std_lib_facilities.h"```, just using standard lib's. Trying
 ### Not finished (Will do after finishing book):  
 Ch06 - Ex06  
 Ch07  
-Ch09 - clean up big mess
+Ch09 - clean up mess and finish :3

@@ -18,7 +18,9 @@ private:
 
 void Oper::getFile()
 {
-    ifstream ist{"ex11.txt"};
+    string name;
+    cin >> name;
+    ifstream ist{name};
     if (!ist)
         throw runtime_error("Cant read file");
 
