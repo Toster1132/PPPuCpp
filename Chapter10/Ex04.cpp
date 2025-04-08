@@ -49,16 +49,18 @@ void cTemps::readTemps()
     char z = ' ';
     while(ist >> x >> y >> z)
     {
-        if(z == 'f'){}
-        else if(z == 'c')
+        switch (z)
         {
+        case 'f':
+            break;
+        case 'c':
             y = (y*1.8)+32;
             if(y < -459.75) throw runtime_error("Bellow absolute zero");
             z = 'f';
-        }
-        else
-        {
+            break;
+        default:
             throw runtime_error("Unknown char");
+            break;
         }
         v.push_back(temps{x,y,z});
     }
